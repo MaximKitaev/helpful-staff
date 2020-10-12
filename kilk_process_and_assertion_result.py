@@ -1,3 +1,5 @@
+import subprocess
+
 def process_exists(process_name):
     call = 'TASKLIST', '/FI', 'imagename eq %s' % process_name
     # use buildin check_output right away
