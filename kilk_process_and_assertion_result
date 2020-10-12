@@ -11,3 +11,8 @@ def process_exists(process_name):
 def kill_process(process_name):
     subprocess.Popen(f"taskkill /f /im {process_name}")
     assert not process_exists('firefox.exe'), 'Firefox Process Wasnt Closed'
+
+
+proc = 'firefox.exe'
+kill_process(proc)
+assert not process_exists(proc), 'Error. Process Process Wasnt Closed'
